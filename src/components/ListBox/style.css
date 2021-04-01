@@ -1,0 +1,9 @@
+.ListBox-box {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  padding: 25px;
+  margin: 10px;
+  text-align: center;
+  border: 5px solid red;
+}

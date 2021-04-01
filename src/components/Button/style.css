@@ -1,0 +1,21 @@
+.Button-primary {
+    background-color:purple;
+    color: #fff;
+    width: fit-content;
+    border: 1px solid purple;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+.Button-secondary {
+    background-color: seagreen;
+    color: #fff;
+    width: fit-content;
+    border: 1px solid seagreen;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
