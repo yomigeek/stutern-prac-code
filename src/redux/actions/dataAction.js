@@ -3,20 +3,20 @@ import {
   GET_DATA_SUCCESS,
   GET_DATA_FAILURE,
 } from "../actionTypes";
-import {getAllData} from "../api/data";
+import {getAllStories} from "../api/data";
 
 export const fetchAllData = () => async (dispatch) => {
   try {
     dispatch({
       type: GET_DATA_REQUEST,
     });
-    const response = await getAllData();
-    console.log(response.data);
+    const response = await getAllStories();
+    console.log(response.data.data);
     if (response.status === 200) {
       dispatch({
         type: GET_DATA_SUCCESS,
         payload: {
-          result: response.data,
+          result: response.data.data,
         },
       });
     } else {

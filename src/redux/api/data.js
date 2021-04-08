@@ -1,8 +1,8 @@
 import api from './config';
 
 //get sample
-export const getAllData = async () => {
-  const request = await api.get('/users');
+export const getAllStories = async () => {
+  const request = await api.get('/getStories');
   return request;
 };
 

@@ -55,7 +55,7 @@ const SimpleForm = () => {
 
   useEffect(() => {
     if(userStore.loginSuccess) {
-      // window.location.href = '/dashboard';
+      window.location.href = '/dashboard';
     }
   }, [userStore.loginSuccess])
 

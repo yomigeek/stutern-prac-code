@@ -36,7 +36,7 @@ const Home = () => {
           flexWrap: 'wrap'
         }}
       >
-        {data.map((user) => {
+        {data || [].map((user) => {
           return (
             <div key={user.id} style={{
               width: '200px',

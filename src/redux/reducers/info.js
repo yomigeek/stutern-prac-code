@@ -6,7 +6,7 @@ import {
 
 const initialState = {
   loading: false,
-  data: [],
+  stories: [],
 };
 
 /**
@@ -25,7 +25,7 @@ export default function (state = initialState, {type, payload }) {
       return {
         ...state,
         loading: false,
-        data: payload.result
+        stories: payload.result
       };
     case GET_DATA_FAILURE:
       return {

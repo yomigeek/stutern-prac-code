@@ -1,12 +1,5 @@
 import axios from 'axios';
-
-export const getToken = () => {
-  const token = localStorage.getItem('accessToken');
-  if (token) {
-    return JSON.parse(localStorage.getItem('accessToken'));
-  }
-  return null;
-};
+import { getToken } from './auth';
 
 const instance = axios.create({
     baseURL: process.env.REACT_APP_BASE_URL || 'https://rest-api-dummy.herokuapp.com/api'
@@ -15,9 +8,9 @@ const instance = axios.create({
 instance.interceptors.request.use(
   async (config) => {
     const token = getToken();
-
+    console.log(config, 'config')
     if (token) {
-      config.headers['x-access-token'] = ``;
+      config.headers['x-access-token'] = token;
     }
     return config;
   },
